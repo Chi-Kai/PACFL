@@ -177,7 +177,7 @@ print(total)
 
 ################################# Fixing all to the same Init and data partitioning and random users 
 #print(os.getcwd())
-
+'''
 tt = '../initialization/' + 'traindata_'+args.dataset+'_'+args.partition+'.pkl'
 with open(tt, 'rb') as f:
     net_dataidx_map = pickle.load(f)
@@ -206,7 +206,7 @@ with open(tt, 'rb') as f:
 tt = '../initialization/' + 'comm_users.pkl'
 with open(tt, 'rb') as f:
     comm_users = pickle.load(f)
-    
+'''    
 ################################# Initializing Clients 
 
 m = max(int(args.frac * args.num_users), 1)
