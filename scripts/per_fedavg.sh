@@ -1,24 +1,24 @@
 for trial in 1
 do
-    dir='../save_results/per_fedavg/noniid1-#label20/cifar100'
+    dir='../save_results/cfl/noniid-labeldir/cifar10'
     if [ ! -e $dir ]; then
     mkdir -p $dir
     fi 
     
     python ../main_per_fedavg.py --trial=$trial \
-    --rounds=500 \
+    --rounds=20 \
     --num_users=100 \
     --frac=0.1 \
     --local_ep=10 \
     --local_bs=10 \
     --lr=0.01 \
     --momentum=0.5 \
-    --model=resnet9 \
-    --dataset=cifar100 \
+    --model=simple-cnn\
+    --dataset=cifar10 \
     --datadir='../../data/' \
     --logdir='../../logs/' \
     --savedir='../save_results/' \
-    --partition='noniid1-#label20' \
+    --partition='noniid-labeldir' \
     --alg='per_fedavg' \
     --beta=0.1 \
     --local_view \
