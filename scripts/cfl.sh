@@ -1,6 +1,6 @@
 for trial in 1 2 3
 do
-    dir='../save_results/cfl/noniid-labeldir/cifar10'
+    dir='../save_results/cfl/noniid-#label2/cifar10'
     if [ ! -e $dir ]; then
     mkdir -p $dir
     fi 
@@ -18,7 +18,7 @@ do
     --datadir='../../data/' \
     --logdir='../../logs/' \
     --savedir='../save_results/' \
-    --partition='noniid-labeldir' \
+    --partition='noniid-#label2' \
     --alg='cfl' \
     --beta=0.5 \
     --local_view \

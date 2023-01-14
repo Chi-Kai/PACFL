@@ -6,7 +6,7 @@ do
     fi 
     
     python ../main_pacfl.py --trial=1 \
-    --rounds=200 \
+    --rounds=20 \
     --num_users=100 \
     --frac=0.1 \
     --local_ep=10 \
